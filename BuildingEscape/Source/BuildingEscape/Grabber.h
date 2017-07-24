@@ -24,7 +24,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
+	
 private:
 	// How far ahead of the player can we reach in cm
 	UPROPERTY(EditAnywhere)
@@ -48,4 +48,10 @@ private:
 
 	// Return hit for first physics body in reach
 	FHitResult GetFirstPhysicsBodyInReach() const;
+	
+	// Returns current start of reach line
+	FVector GetReachLineStart() const;
+
+	// Returns current end of reach line
+	FVector GetReachLineEnd() const;
 };
